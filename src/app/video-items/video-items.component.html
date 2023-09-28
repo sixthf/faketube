@@ -1,1 +1,14 @@
-<p>video-items works!</p>
+<div class="card mt-2" style="width: 100%">
+  <iframe
+    *ngIf="safeUrl"
+    [src]="safeUrl"
+    class="card-img-top"
+    alt="img video"
+    style="height: 300px"
+  ></iframe>
+  <div class="card-body p-2">
+    <h6 class="card-title p-0">{{ video?.titolo }}</h6>
+    <p class="card-text p-0">{{ video?.descrizione }}</p>
+    <p>Likes: {{ video?.like }}</p>
+  </div>
+</div>

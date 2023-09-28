@@ -1,1 +1,17 @@
-<p>video-list works!</p>
+<div id="listaVideo" *ngFor="let v of videoList">
+  <div
+    id="clickable"
+    class="card m-2"
+    style="width: 12rem; height: 20rem"
+    (click)="goToDetails(v.id)"
+  >
+    <img [src]="v.img" class="card-img-top" alt="img video" />
+    <div class="card-body p-2">
+      <h6 class="card-title p-0">{{ v.titolo | truncate : 25 }}</h6>
+      <p class="card-text p-0">{{ v.descrizione | truncate : 30 }}</p>
+      <p>Likes: {{ v.like }}</p>
+
+      <a class="btn btn-outline-danger btn-sm" [href]="v.url">vai al video</a>
+    </div>
+  </div>
+</div>
