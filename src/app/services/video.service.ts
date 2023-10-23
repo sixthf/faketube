@@ -13,7 +13,7 @@ export class VideoService {
   getVideoList(): Observable<Video[]> {
     let queryParams: string = [
       `chart=mostPopular`,
-      `regionCode=US`,
+      `regionCode=IT`,
       `part=snippet,contentDetails,statistics`,
       `maxResults=8`,
       `type=video`,
